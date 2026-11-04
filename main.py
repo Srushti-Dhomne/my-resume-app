@@ -7,3 +7,8 @@ students = [
 for s in students:
   if s["Age"] == 19 and s["Skill"] == "Python":
     print(s["Name"])
+
+print("\n--- Students with Python Skill ---")
+for s in students:
+    if s["Skill"] == "Python":
+        print(f"{s['Name']} knows Python")
