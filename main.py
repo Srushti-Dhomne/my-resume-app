@@ -12,3 +12,7 @@ print("\n--- Students with Python Skill ---")
 for s in students:
     if s["Skill"] == "Python":
         print(f"{s['Name']} knows Python")
+print("\n--- Students who are 18 years old ---")
+for s in students:
+    if s["Age"] == 18:
+        print(f"{s['Name']} is 18 years old")
