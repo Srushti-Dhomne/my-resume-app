@@ -4,7 +4,8 @@ students = [
     {"Name": "Anjali", "Age": 18, "Skill": "Python"},
     {"Name": "Rohan", "Age": 20, "Skill": "Java"},
     {"Name": "Meera", "Age": 19, "Skill": "Java"},
-    {"Name": "Aarav", "Age": 21, "Skill": "Python"}
+    {"Name": "Aarav", "Age": 21, "Skill": "Python"},
+    {"Name": "Riya", "Age": 21, "Skill": "HTML"}
 ]
 
 # Filter by Python Skill
@@ -31,3 +32,8 @@ for s in students:
 for s in students:
     if s["Age"] == 21:
         print(f"{s['Name']} is 21 years old")
+
+# Filter by HTML Skill
+for s in students:
+    if s["Skill"] == "HTML":
+        print(f"{s['Name']} knows HTML")
