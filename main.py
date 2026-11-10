@@ -6,7 +6,8 @@ students = [
     {"Name": "Meera", "Age": 19, "Skill": "Java"},
     {"Name": "Aarav", "Age": 21, "Skill": "Python"},
     {"Name": "Riya", "Age": 21, "Skill": "HTML"},
-    {"Name": "Sneha", "Age": 22, "Skill": "CSS"}
+    {"Name": "Sneha", "Age": 22, "Skill": "CSS"},
+    {"Name": "Kabir", "Age": 23, "Skill": "SQL"}
 ]
 
 # Filter by Python Skill
@@ -43,3 +44,8 @@ for s in students:
 for s in students:
     if s["Skill"] == "CSS":
         print(f"{s['Name']} knows CSS")
+
+# Filter by SQL Skill
+for s in students:
+    if s["Skill"] == "SQL":
+        print(f"{s['Name']} knows SQL")
