@@ -13,6 +13,7 @@ students = [
     {"Name": "Vihaan", "Age": 26, "Skill": "Node.js"},
     {"Name": "Ananya", "Age": 27, "Skill": "C++"},
     {"Name": "Diya", "Age": 28, "Skill": "TypeScript"},
+    {"Name": "Kavya", "Age": 29, "Skill": "Tailwind CSS"},
 ]
 
 # Filter by Python Skill
@@ -75,7 +76,12 @@ for s in students:
     if s["Skill"] == "C++":
         print(f"{s['Name']} knows C++")
 
-# Filter by TypeScript Skill 
+# Filter by TypeScript Skill
 for s in students:
     if s["Skill"] == "TypeScript":
         print(f"{s['Name']} knows TypeScript")
+
+# Filter by Tailwind CSS Skill 
+for s in students:
+    if s["Skill"] == "Tailwind CSS":
+        print(f"{s['Name']} knows Tailwind CSS")
