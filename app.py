@@ -35,11 +35,15 @@ def get_one_student(name: str):
             return s
     return {"message": "Student not found"}
 
-# DAY 30 NEW - Skill se dhoondhna
 @app.get("/students/skill/{skill}")
 def get_by_skill(skill: str):
     result = []
     for s in students:
         if s["Skill"] == skill:
             result.append(s)
-    return result    
+    return result
+
+@app.post("/students")
+def add_student(student: dict):
+    students.append(student)
+    return student
