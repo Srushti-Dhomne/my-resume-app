@@ -47,3 +47,12 @@ def get_by_skill(skill: str):
 def add_student(student: dict):
     students.append(student)
     return student
+
+# DAY 32 NEW - Student ko delete karna
+@app.delete("/students/{name}")
+def delete_student(name: str):
+    for s in students:
+        if s["Name"] == name:
+            students.remove(s)
+            return {"message": f"{name} deleted"}
+    return {"message": "Student not found"}
