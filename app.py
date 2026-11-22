@@ -48,7 +48,6 @@ def add_student(student: dict):
     students.append(student)
     return student
 
-# DAY 32 NEW - Student ko delete karna
 @app.delete("/students/{name}")
 def delete_student(name: str):
     for s in students:
