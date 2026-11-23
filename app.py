@@ -55,3 +55,11 @@ def delete_student(name: str):
             students.remove(s)
             return {"message": f"{name} deleted"}
     return {"message": "Student not found"}
+
+@app.put("/students/{name}")
+def update_student(name: str, new_data: dict):
+    for s in students:
+        if s["Name"] == name:
+            s.update(new_data)
+            return s
+    return {"message": "Student not found"}
