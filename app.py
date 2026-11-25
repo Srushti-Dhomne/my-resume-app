@@ -63,3 +63,7 @@ def update_student(name: str, new_data: dict):
             s.update(new_data)
             return s
     return {"message": "Student not found"}
+
+@app.get("/students/count")
+def count_students():
+    return {"total_students": len(students)}
