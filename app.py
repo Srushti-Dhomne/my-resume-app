@@ -66,4 +66,12 @@ def update_student(name: str, new_data: dict):
 
 @app.get("/students/count")
 def count_students():
-    return {"total_students": len(students)}
+    return {"total_students": len(students)} 
+
+@app.get("/skills")
+def get_all_skills():
+    skills = []
+    for s in students:
+        if s["skill"] not in skills:
+            skills.append(s["skill"])
+    return {"skills": skills}
