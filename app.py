@@ -75,3 +75,11 @@ def get_all_skills():
         if s["skill"] not in skills:
             skills.append(s["skill"])
     return {"skills": skills}
+    
+@app.get("/students/average-age")
+def average_age():
+    total = 0
+    for s in students:
+        total = total + s["age"]
+    avg = total / len(students)
+    return {"average_age": avg}
