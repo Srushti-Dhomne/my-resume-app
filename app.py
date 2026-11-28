@@ -83,3 +83,11 @@ def average_age():
         total = total + s["age"]
     avg = total / len(students)
     return {"average_age": avg}
+
+@app.get("/students/oldest")
+def oldest_student():
+    oldest = students[0]
+    for s in students:
+        if s["age"] > oldest["age"]:
+            oldest = s
+    return oldest
